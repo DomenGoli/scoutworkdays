@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="sl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kdaj gremo v penzijo?</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="body">
+        <div>
+            <h1 class="title">Število dni do penzije:</h1>
+            <h2 class="text">Vseh dni:</h2>
+            <h2 class="number" id="absolute">000</h2>
+            <h2 class="text">Delovnikov:</h2>
+            <h2 class="number" id="delovniki">000</h2>
+            <h2 class="text">Naslednji praznik med tednom:</h2>
+            <h2 class="text praznik">None</h2>
+            <h2 class="text1">Datum upokojitve:</h2>
+            <button class="btn">1.1.1970</button>
+        </div>
+        <!-- MODAL input -->
+        <div class="datum_input hidden">
+            <button class="close-modal">&times;</button>
+            <h2 class="text2">Datum upokojitve</h2>
+            <br />
+            <form class="form form--transfer">
+                <input
+                    type="number"
+                    class="input day_input"
+                    placeholder="Dan"
+                    onInput="this.value = this.value.slice(0, 2)"
+                />
+                <br />
+                <input
+                    type="number"
+                    class="input month_input"
+                    placeholder="Mesec"
+                    onInput="this.value = this.value.slice(0, 2)"
+                />
+                <br />
+                <input
+                    type="number"
+                    class="input year_input"
+                    placeholder="Leto"
+                    onInput="this.value = this.value.slice(0, 4)"
+                />
+                <br />
+                <br />
+                <button class="input btn_input">&rarr;</button>
+            </form>
+        </div>
+        <div class="overlay hidden"></div>
+    </body>
+    <script type="module" src="JS/controller.js"></script>
+    
+</html>
